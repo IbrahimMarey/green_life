@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:green_life/screens/Home/home_screen.dart';
+import 'package:green_life/screens/Home/main_screen.dart';
 import 'package:green_life/screens/auth/login/login_screen.dart';
 import 'package:green_life/sheard.dart';
 
@@ -28,7 +28,11 @@ class RegisterScreen extends StatelessWidget {
                 txt: 'Sign Up',
                 radius: 18,
                 onTap: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
+                  Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => MainScreen(),
+                      ));
                 },
               ),
               SizedBox(
@@ -41,25 +45,6 @@ class RegisterScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  Container(
-                      width: 75,
-                      height: 55,
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey,
-                              offset: Offset(0.0, 1.0), //(x,y)
-                              blurRadius: 6.0,
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(8),
-                          color: Colors.white
-                      ),
-                      child: Icon(
-                        Icons.apple,
-                        color: Colors.black,
-                        size: 36,
-                      )),
                   Container(
                     width: 75,
                     height: 55,
@@ -74,11 +59,31 @@ class RegisterScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         color: Colors.white
                     ),
+                    child: SizedBox(
+                      width: 45,
+                      height: 35,
+                      child: Image.asset('assets/google.png'),
+                    ),
+                  ),
+                  Container(
+                    width: 75,
+                    height: 55,
+                    decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.grey,
+                            offset: Offset(0.0, 1.0), //(x,y)
+                            blurRadius: 6.0,
+                          ),
+                        ],
+                        borderRadius: BorderRadius.circular(8),
+                        color: Colors.white),
                     child: Icon(
                       Icons.facebook,
                       color: Color(0xff0000FF),
-                      size: 36,
-                    ),),
+                      size: 48,
+                    ),
+                  ),
                   Container(
                       width: 75,
                       height: 55,
@@ -91,12 +96,11 @@ class RegisterScreen extends StatelessWidget {
                             ),
                           ],
                           borderRadius: BorderRadius.circular(8),
-                          color: Colors.white
-                      ),
+                          color: Colors.white),
                       child: Icon(
                         Icons.apple,
                         color: Colors.black,
-                        size: 36,
+                        size: 48,
                       )),
                 ],
               ),

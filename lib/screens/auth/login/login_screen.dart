@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:green_life/screens/Home/home_screen.dart';
+import 'package:green_life/screens/Home/main_screen.dart';
 import 'package:green_life/screens/auth/register/register_screen.dart';
 import 'package:green_life/sheard.dart';
 
@@ -26,7 +26,7 @@ class LoginScreen extends StatelessWidget {
                 txt: 'Login',
                 radius: 18,
                 onTap: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => HomeScreen(),));
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => MainScreen(),));
                 },
               ),
               SizedBox(
@@ -53,11 +53,10 @@ class LoginScreen extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                           color: Colors.white
                       ),
-                      child: Icon(
-                        Icons.apple,
-                        color: Colors.black,
-                        size: 36,
-                      )),
+                      child: Image.asset('assets/google.png',
+                        width: 20,
+                        height: 25,
+                      ),),
                   Container(
                       width: 75,
                       height: 55,
@@ -75,7 +74,7 @@ class LoginScreen extends StatelessWidget {
                       child: Icon(
                         Icons.facebook,
                         color: Color(0xff0000FF),
-                        size: 36,
+                        size: 48,
                       ),),
                   Container(
                     width: 75,
@@ -94,7 +93,7 @@ class LoginScreen extends StatelessWidget {
                       child: Icon(
                     Icons.apple,
                     color: Colors.black,
-                    size: 36,
+                    size: 48,
                   )),
                 ],
               ),

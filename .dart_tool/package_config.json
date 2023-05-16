@@ -98,6 +98,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "percent_indicator",
+      "rootUri": "file:///C:/Users/HimaMarey/AppData/Local/Pub/Cache/hosted/pub.dev/percent_indicator-4.2.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///C:/src/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -158,7 +164,7 @@
       "languageVersion": "2.19"
     }
   ],
-  "generated": "2023-05-15T15:08:29.015370Z",
+  "generated": "2023-05-16T11:01:39.691491Z",
   "generator": "pub",
   "generatorVersion": "2.19.6"
 }

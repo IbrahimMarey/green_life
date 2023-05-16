@@ -32,7 +32,7 @@ Widget formFiled({
   bool passwordHide = false,
 }) {
   return Padding(
-    padding: const EdgeInsets.symmetric(vertical: 8.0),
+    padding: const EdgeInsets.symmetric(vertical: 12.0),
     child: TextFormField(
       controller: controller,
       obscureText: passwordHide,
@@ -44,11 +44,34 @@ Widget formFiled({
         border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(24),
             borderSide: BorderSide(color: kPrimaryColor)),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(24),
+            borderSide: BorderSide(color: kPrimaryColor)),
       ),
     ),
   );
 }
-
+Widget listTile({
+  required String txt,
+  required IconData leadingIcon,
+  required IconData trailingIcon,
+  required VoidCallback onTap,
+}){
+  return Column(
+    children: [
+      ListTile(
+        leading: Icon(leadingIcon,color: kPrimaryColor,),
+        trailing:Icon(trailingIcon,color: kPrimaryColor,) ,
+        title: Text(txt),
+        onTap: onTap,
+      ),
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+        child: Divider(),
+      ),
+    ],
+  );
+}
 Widget sharedText({
   required String txt,
   double fontSize = 16,
