@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:green_life/drawer.dart';
 import 'package:green_life/screens/Home/community.dart';
 import 'package:green_life/screens/Home/home_screen.dart';
+import 'package:green_life/screens/Home/location.dart';
 import 'package:green_life/screens/Home/product_screen.dart';
+import 'package:green_life/screens/Home/wallet.dart';
 import 'package:green_life/screens/profile/profile_screen.dart';
 import 'package:green_life/sheard.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
@@ -19,6 +21,8 @@ class _MainScreenState extends State<MainScreen> {
   int index = 0;
   List<Widget> navList=[
     HomeScreen(),
+    WalletScreen(),
+    LocationScreen(),
     ProductScreen(),
     CommunityScreen(),
   ];
@@ -91,11 +95,14 @@ class _MainScreenState extends State<MainScreen> {
       body: navList.elementAt(index),
       bottomNavigationBar: BottomNavigationBar(items: [
         BottomNavigationBarItem(icon: Icon(Icons.home_outlined), label: 'Home',),
+        BottomNavigationBarItem(icon: Icon(Icons.wallet), label: 'Wallet',),
+        BottomNavigationBarItem(icon: Icon(Icons.location_on_outlined), label: 'Location',),
         BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Product',),
         BottomNavigationBarItem(icon: Icon(Icons.groups), label: 'Community',),
       ],
         currentIndex: index,
         selectedItemColor: kPrimaryColor,
+        unselectedItemColor: Colors.grey,
         onTap: (i){
         setState(() {
           index = i;

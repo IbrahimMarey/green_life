@@ -6,9 +6,12 @@ const Color kPrimaryColor = Color(0xff008F55);
 Widget sharedBtn(
     {required String txt,
      double radius= 18,
+      double width = double.infinity,
+      Color textColor =Colors.white,
     required VoidCallback onTap}) {
   return Container(
-    width: double.infinity,
+    width: width,
+
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(radius),
       color: kPrimaryColor,
@@ -18,7 +21,7 @@ Widget sharedBtn(
       child: Text(
         txt,
         style: TextStyle(
-          color: Colors.white,
+          color: textColor,
           fontSize: 18,
         ),
       ),
@@ -84,6 +87,7 @@ Widget sharedText({
       fontSize: fontSize,
       fontWeight: fontWeight,
       color: color,
+      //overflow: TextOverflow.clip
     ),
   );
 }
